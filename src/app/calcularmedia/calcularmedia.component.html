@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Calculadora de Média</h2>
+  <div id="gradeInputs" class="row g-3">
+      <div class="col-md-3">
+          <div class="input-group">
+              <label for="grade1" class="input-group-text">AC1:</label>
+              <input type="number" class="form-control" [(ngModel)]="ac1" min="0" max="10" placeholder="Nota AC1">
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="input-group">
+              <label for="grade2" class="input-group-text">AC2:</label>
+              <input type="number" class="form-control" [(ngModel)]="ac2" min="0" max="10" placeholder="Nota AC2">
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="input-group">
+              <label for="ag" class="input-group-text">AG:</label>
+              <input type="number" class="form-control" [(ngModel)]="ag" min="0" max="10" placeholder="Nota AG">
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="input-group">
+              <label for="af" class="input-group-text">AF:</label>
+              <input type="number" class="form-control" [(ngModel)]="af" min="0" max="10" placeholder="Nota AF">
+          </div>
+      </div>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+      <button class="btn btn-primary me-2" (click)="calcularmedia()">Calcular</button>
+      <p id="average" class="m-0 fs-5">{{status}}</p>
+      <button class="btn btn-warning" (click)="limpar()">Limpar</button>
+  </div>
+</div>

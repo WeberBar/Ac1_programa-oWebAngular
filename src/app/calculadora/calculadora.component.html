@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h1 class="text-center">Calculadora</h1>
+  <div class="row">
+      <div class="col-md-3">
+          <input type="number" class="form-control" placeholder="Valor 1" [(ngModel)]="valor1">
+      </div>
+      <div class="col-md-2">
+          <select class="form-select" [(ngModel)]="operator">
+              <optgroup label="Básico">
+                  <option value="+">+(somar)</option>
+                  <option value="-">-(subtrair)</option>
+                  <option value="*">*(multiplicar)</option>
+                  <option value="/">/(dividir)</option>
+              </optgroup>
+          </select>
+      </div>
+      <div class="col-md-3">
+          <input type="number" class="form-control" placeholder="Valor 2" [(ngModel)]="valor2">
+      </div>
+      <div class="col-md-4">
+          <button class="btn btn-primary me-2" (click)="calcular()">Calcular</button>
+          <button class="btn btn-warning" (click)="limpar()">Limpar</button>
+      </div>
+  </div>
+  <div class="row mt-3">
+      <div class="col-md-12">
+          <p id="saida" class="fs-5">Resultado: {{result}}</p>
+      </div>
+  </div>
+  <hr>
+</div>
